@@ -181,6 +181,29 @@
       document.getElementById('footer-placeholder').innerHTML = data;
     })
     .catch(error => console.error('Greška pri učitavanju footera:', error));
+
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+// Automatsko menjanje na svakih 7 sekundi (malo duže jer ima više teksta za čitanje)
+setInterval(function() {
+  plusDivs(1);
+}, 7000);
     </script>
 </body>
 </html>
