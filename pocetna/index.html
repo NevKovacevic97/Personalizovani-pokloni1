@@ -226,10 +226,20 @@
 
 <!-- Preuzmi besplatno dizajn -->
 
-<div style="display: flex; align-items: center; justify-content: center; gap: 30px; font-family: sans-serif; padding: 50px;">
+<div style="
+    display: flex; 
+    flex-wrap: wrap; /* Ovo je ključno! Dozvoljava elementima da pređu u novi red */
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    font-family: sans-serif; 
+    padding: 50px 20px; /* Smanjen padding sa strana za telefon */
+    max-width: 100%; /* Da ne beži van ekrana */
+">
 
-    <img src="nikolatesla.jpg" alt="Tesla" style="width: 400px; height: auto;">
-     <img src="ARROW.svg" alt="strelica" style="width: 200px;">
+    <img src="nikolatesla.jpg" alt="Tesla" style="width: 100%; max-width: 400px; height: auto;">
+    
+    <img src="ARROW.svg" alt="strelica" style="width: 100px; transform: rotate(0deg);">
 
     <a href="nikolatesla.jpg" download="nikolatesla.jpg" style="
         background-color: black; 
@@ -242,12 +252,11 @@
         text-transform: uppercase;
         box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
         transition: 0.3s;
-        /* Ako želiš da ga pomeriš malo niže ili više, koristi margin-top: */
-        margin-top: 100px; 
+        text-align: center;
+        min-width: 250px; /* Da dugme lepo izgleda na telefonu */
     ">
         PREUZMI BESPLATAN DIZAJN
     </a>
-
 
 </div>
 
