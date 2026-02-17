@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.css">
+>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+<body>
+    <!-- Navbar (sit on top) -->
+<div id="navbar-placeholder"></div>
+
+
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+    <!-- Contact -->
+<div class="w3-container w3-padding-64" id="contact" style="background-color: #fdfdfd;">
+    <div style="max-width: 600px; margin: auto; text-align: center;">
+        
+        <h2 style="font-family: 'Bangers', cursive; font-size: 45px; color: black; letter-spacing: 2px;">KONTAKT</h2>
+        
+        <p style="font-family: Verdana; font-size: 16px; color: #555; margin-bottom: 30px;">
+            Ako imaš neko pitanje ili hoćeš da zajedno osmislimo tvoj dizajn,<br>
+            stupi sa nama u kontakt ovde ;)
+        </p>
+
+        <div class="w3-card-4 w3-white w3-padding-large" style="border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.05);">
+            <form action="/action_page.php" target="_blank">
+                
+                <div style="text-align: left; margin-bottom: 15px;">
+                    <label style="font-family: Verdana; font-size: 13px; color: #888; margin-left: 5px;">Ime i prezime</label>
+                    <input class="w3-input w3-border" type="text" placeholder="Unesi svoje ime" required name="Name" style="border-radius: 10px; padding: 12px;">
+                </div>
+
+                <div style="text-align: left; margin-bottom: 15px;">
+                    <label style="font-family: Verdana; font-size: 13px; color: #888; margin-left: 5px;">E-mail adresa</label>
+                    <input class="w3-input w3-border" type="email" placeholder="primer@mail.com" required name="Email" style="border-radius: 10px; padding: 12px;">
+                </div>
+
+                <div style="text-align: left; margin-bottom: 15px;">
+                    <label style="font-family: Verdana; font-size: 13px; color: #888; margin-left: 5px;">Naslov poruke</label>
+                    <input class="w3-input w3-border" type="text" placeholder="Npr. Upit za karikaturu" required name="Subject" style="border-radius: 10px; padding: 12px;">
+                </div>
+
+                <div style="text-align: left; margin-bottom: 20px;">
+                    <label style="font-family: Verdana; font-size: 13px; color: #888; margin-left: 5px;">Tvoja poruka</label>
+                    <textarea class="w3-input w3-border" placeholder="Kako možemo da ti pomognemo?" required name="Comment" rows="4" style="border-radius: 10px; padding: 12px; resize: none;"></textarea>
+                </div>
+                
+                <button class="w3-button w3-section" type="submit" style="
+                    width: 100%; 
+                    background-color: #28a745; 
+                    color: white; 
+                    font-family: Verdana; 
+                    font-weight: bold; 
+                    font-size: 18px; 
+                    border-radius: 10px; 
+                    padding: 15px;
+                    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+                    transition: 0.3s;
+                " onmouseover="this.style.backgroundColor='#218838'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#28a745'; this.style.transform='translateY(0)'">
+                    <i class="fa fa-paper-plane" style="margin-right: 10px;"></i> POŠALJI PORUKU
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script>
+
+// 1. Učitavanje navbara
+  fetch('../navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(err => console.error("Greška: Proveri da li se fajl zove navbar-sadrzaj.html", err));
+
+  // 2. UNIVERZALNI KLIK - Radi na ID-jeve i klase
+  document.addEventListener('click', function (e) {
+    const sidebar = document.getElementById("mySidebar");
+    const overlay = document.getElementById("myOverlay");
+
+    if (!sidebar || !overlay) return; // Ako navbar još nije učitan, ne radi ništa
+
+    // Proveravamo da li je kliknuto na dugme sa tri crtice (☰)
+    if (e.target.classList.contains('open-menu-btn') || e.target.innerText === "☰") {
+       sidebar.style.display = "block";
+       overlay.style.display = "block";
+    }
+
+    // Proveravamo da li je kliknuto na dugme zatvori ili na overlay (pozadinu)
+    if (e.target.classList.contains('close-menu-btn') || e.target === overlay || e.target.innerText.includes("ZATVORI")) {
+       sidebar.style.display = "none";
+       overlay.style.display = "none";
+    }
+  });
+
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Greška pri učitavanju footera:', error));
+    </script>
+</body>
+</html>

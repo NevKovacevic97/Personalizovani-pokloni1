@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.css">
+   
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+       #faq .w3-button:hover {
+    background-color: #f1f1f1 !important;
+    color: #28a745 !important; /* Tekst blago pozeleni na hover */
+}
+
+    </style>
+</head>
+<body>
+
+ <!-- Navbar (sit on top) -->
+<div id="navbar-placeholder"></div>
+
+
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">   
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="faq">
+  <h2 class="w3-center" style="font-family: 'Bangers', sans-serif; font-size: 45px; margin-bottom: 40px;">NAJČEŠĆA PITANJA</h2>
+  
+  <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-left-align w3-white w3-border-bottom" style="font-family: Verdana; font-size: 20px; font-weight: bold; padding: 20px 0;">
+    <i class="fa fa-plus" style="color: #28a745; margin-right: 15px;"></i> Koliko se čeka na izradu karikature?
+  </button>
+  <div id="Demo1" class="w3-hide w3-container">
+    <p style="font-family: Verdana; padding: 15px 0; color: #555; font-size: 17px; line-height: 1.6;">
+      Standardno vreme izrade je 3 do 5 radnih dana, ali ako ti je hitno, uvek možemo da se dogovorimo za "brzu traku" ;)
+    </p>
+  </div>
+
+  <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-left-align w3-white w3-border-bottom" style="font-family: Verdana; font-size: 20px; font-weight: bold; padding: 20px 0;">
+    <i class="fa fa-plus" style="color: #28a745; margin-right: 15px;"></i> Kako vam šaljem slike?
+  </button>
+  <div id="Demo2" class="w3-hide w3-container">
+    <p style="font-family: Verdana; padding: 15px 0; color: #555; font-size: 17px; line-height: 1.6;">
+      Slike nam možeš poslati putem Instagrama, WhatsApp-a ili na naš e-mail. Bitno je samo da su što jasnije!
+    </p>
+  </div>
+
+  <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-left-align w3-white w3-border-bottom" style="font-family: Verdana; font-size: 20px; font-weight: bold; padding: 20px 0;">
+    <i class="fa fa-plus" style="color: #28a745; margin-right: 15px;"></i> Da li šaljete uramljene radove?
+  </button>
+  <div id="Demo3" class="w3-hide w3-container">
+    <p style="font-family: Verdana; padding: 15px 0; color: #555; font-size: 17px; line-height: 1.6;">
+      Naravno! Možeš birati između digitalne verzije, štampe na platnu ili uramljenog rada koji stiže pravo na adresu.
+    </p>
+  </div>
+
+  <button onclick="myFunction('Demo4')" class="w3-button w3-block w3-left-align w3-white w3-border-bottom" style="font-family: Verdana; font-size: 20px; font-weight: bold; padding: 20px 0;">
+    <i class="fa fa-plus" style="color: #28a745; margin-right: 15px;"></i> Koja je cena izrade?
+  </button>
+  <div id="Demo4" class="w3-hide w3-container">
+    <p style="font-family: Verdana; padding: 15px 0; color: #555; font-size: 17px; line-height: 1.6;">
+      Cena zavisi od broja osoba na karikaturi i formata (digitalni rad, uramljen rad ili platno). Piši nam za tačan cenovnik!
+    </p>
+  </div>
+
+  <button onclick="myFunction('Demo5')" class="w3-button w3-block w3-left-align w3-white w3-border-bottom" style="font-family: Verdana; font-size: 20px; font-weight: bold; padding: 20px 0;">
+    <i class="fa fa-plus" style="color: #28a745; margin-right: 15px;"></i> Kako se vrši plaćanje?
+  </button>
+  <div id="Demo5" class="w3-hide w3-container">
+    <p style="font-family: Verdana; padding: 15px 0; color: #555; font-size: 17px; line-height: 1.6;">
+      Plaćanje se vrši pouzećem (kada ti kurir donese paket) ili uplatom na račun ako šalješ nekom poklon direktno na adresu.
+    </p>
+  </div>
+
+  <button onclick="myFunction('Demo6')" class="w3-button w3-block w3-left-align w3-white w3-border-bottom" style="font-family: Verdana; font-size: 20px; font-weight: bold; padding: 20px 0;">
+    <i class="fa fa-plus" style="color: #28a745; margin-right: 15px;"></i> Šta ako mi se ne svidi gotov rad?
+  </button>
+  <div id="Demo6" class="w3-hide w3-container">
+    <p style="font-family: Verdana; padding: 15px 0; color: #555; font-size: 17px; line-height: 1.6;">
+      Pre štampe ti uvek šaljemo digitalni nacrt na proveru. Tada možemo uraditi sitne korekcije dok ne budeš 100% zadovoljan/na!
+    </p>
+  </div>
+</div>
+
+
+<!-- Preuzmi besplatno dizajn -->
+<h1 style="font-family: Bangers;"> AKCIJA</h1>
+<div style="display: flex; align-items: center; justify-content: center; gap: 30px; font-family: sans-serif; padding: 50px;">
+
+    <img src="pokloni.jpg" alt="Tesla" style="width: 400px; height: auto;">
+     <img src="ARROW.svg" alt="strelica" style="width: 200px;">
+
+    <a href="LINK_ZA_DOWNLOAD" style="
+        background-color: black; 
+        color: white; 
+        padding: 15px 35px; 
+        text-decoration: none; 
+        border-radius: 8px; 
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+        transition: 0.3s;
+        /* Ako želiš da ga pomeriš malo niže ili više, koristi margin-top: */
+        margin-top: 100px; 
+    ">
+        OVOG MESECA POPUST NA BAS OVAJ DIZAJN, POZURI I NABAVI SVOJ PRIMERAK ;)
+    </a>
+
+</div>
+
+
+ <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+</body>
+
+
+
+</html>
+
+<script>
+
+// 1. Učitavanje navbara
+  fetch('../navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(err => console.error("Greška: Proveri da li se fajl zove navbar-sadrzaj.html", err));
+
+  // 2. UNIVERZALNI KLIK - Radi na ID-jeve i klase
+  document.addEventListener('click', function (e) {
+    const sidebar = document.getElementById("mySidebar");
+    const overlay = document.getElementById("myOverlay");
+
+    if (!sidebar || !overlay) return; // Ako navbar još nije učitan, ne radi ništa
+
+    // Proveravamo da li je kliknuto na dugme sa tri crtice (☰)
+    if (e.target.classList.contains('open-menu-btn') || e.target.innerText === "☰") {
+       sidebar.style.display = "block";
+       overlay.style.display = "block";
+    }
+
+    // Proveravamo da li je kliknuto na dugme zatvori ili na overlay (pozadinu)
+    if (e.target.classList.contains('close-menu-btn') || e.target === overlay || e.target.innerText.includes("ZATVORI")) {
+       sidebar.style.display = "none";
+       overlay.style.display = "none";
+    }
+  });
+
+
+
+  fetch('../footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Greška pri učitavanju footera:', error));
+    </script>
+
+<script>
+
+  
+    function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show"; // Otvara odgovor
+  } else { 
+    x.className = x.className.replace(" w3-show", ""); // Zatvara odgovor
+  }
+}
+</script>

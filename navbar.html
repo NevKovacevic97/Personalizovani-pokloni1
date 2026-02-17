@@ -1,0 +1,22 @@
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="../pocetna/index.html" class="w3-bar-item w3-button"><b>PERSONALIZOVANI</b> POKLONI</a>
+    
+    <span class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" 
+          onclick="document.getElementById('mySidebar').style.display='block';document.getElementById('myOverlay').style.display='block'">☰</span>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top" style="z-index:3; width:250px; display:none; right:0;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-center w3-padding-32" 
+          onclick="document.getElementById('mySidebar').style.display='none';document.getElementById('myOverlay').style.display='none'"
+          style="width:100%; background:none; color:white; border:none;">ZATVORI ×</button> 
+           <a href="../pocetna/index.html" class="w3-bar-item w3-button w3-center">POCETNA</a> 
+  <a href="../ponuda/index.html" class="w3-bar-item w3-button w3-center">PONUDA</a> 
+    <a href="../najcescapitanja/index.html" class="w3-bar-item w3-button w3-center">NAJCESCA PITANJA</a>
+  <a href="../kontakt/index.html" class="w3-bar-item w3-button w3-center">KONTAKT</a>
+</nav>
+
+<div id="myOverlay" class="w3-overlay w3-animate-opacity" 
+     onclick="this.style.display='none';document.getElementById('mySidebar').style.display='none'"
+     style="cursor:pointer; display:none;"></div>
