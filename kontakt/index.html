@@ -144,6 +144,41 @@
   </div>
 </div>
 
+
+<div class="w3-container w3-padding-64 w3-light-grey" id="contact">
+  <div class="w3-content" style="max-width:600px">
+    <h2 class="w3-center">Kontaktiraj nas</h2>
+    <p class="w3-center">Imaš pitanje ili želiš poseban dizajn? Piši nam!</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="cd44da58-fef0-4298-921b-3d74b7b9645e">
+
+      <div class="w3-section">
+        <label>Ime i prezime</label>
+        <input class="w3-input w3-border" type="text" name="name" required>
+      </div>
+
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="email" name="email" required>
+      </div>
+
+      <div class="w3-section">
+        <label>Poruka</label>
+        <textarea class="w3-input w3-border" rows="5" name="message" required></textarea>
+      </div>
+
+      <input type="hidden" name="redirect" value="https://tvojeime.github.io/mojsajt/pocetna/">
+
+      <button type="submit" class="w3-button w3-black w3-block w3-padding-large">POŠALJI PORUKU</button>
+
+      <input type="hidden" name="from_name" value="Tvoj Sajt - Kontakt">
+    </form>
+    </div>
+</div>
+
+
 <div id="footer-placeholder"></div>
 <script>
 
@@ -204,6 +239,43 @@ function showDivs(n) {
 setInterval(function() {
   plusDivs(1);
 }, 7000);
+
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append("access_key", "cd44da58-fef0-4298-921b-3d74b7b9645e");
+
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
     </script>
 </body>
 </html>
