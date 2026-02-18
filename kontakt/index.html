@@ -32,12 +32,12 @@
         <h2 style="font-family: 'Bangers', cursive; font-size: 45px; color: black; letter-spacing: 2px;">KONTAKT</h2>
         
         <p style="font-family: Verdana; font-size: 16px; color: #555; margin-bottom: 30px;">
-            Ako imaš neko pitanje ili hoćeš da zajedno osmislimo tvoj dizajn,<br>
-            stupi sa nama u kontakt ovde ;)
+           Imaš pitanje ili želiš poseban dizajn? Piši nam!
         </p>
 
         <div class="w3-card-4 w3-white w3-padding-large" style="border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.05);">
-            <form action="/action_page.php" target="_blank">
+            <form action="https://api.web3forms.com/submit"  method="POST">
+               <input type="hidden" name="access_key" value="cd44da58-fef0-4298-921b-3d74b7b9645e">
                 
                 <div style="text-align: left; margin-bottom: 15px;">
                     <label style="font-family: Verdana; font-size: 13px; color: #888; margin-left: 5px;">Ime i prezime</label>
@@ -49,10 +49,7 @@
                     <input class="w3-input w3-border" type="email" placeholder="primer@mail.com" required name="Email" style="border-radius: 10px; padding: 12px;">
                 </div>
 
-                <div style="text-align: left; margin-bottom: 15px;">
-                    <label style="font-family: Verdana; font-size: 13px; color: #888; margin-left: 5px;">Naslov poruke</label>
-                    <input class="w3-input w3-border" type="text" placeholder="Npr. Upit za karikaturu" required name="Subject" style="border-radius: 10px; padding: 12px;">
-                </div>
+
 
                 <div style="text-align: left; margin-bottom: 20px;">
                     <label style="font-family: Verdana; font-size: 13px; color: #888; margin-left: 5px;">Tvoja poruka</label>
@@ -74,10 +71,47 @@
                     <i class="fa fa-paper-plane" style="margin-right: 10px;"></i> POŠALJI PORUKU
                 </button>
 
+                <input type="hidden" name="redirect" value="https://nevkovacevic97.github.io/Personalizovani-pokloni1/kontakt/index.html">
             </form>
         </div>
     </div>
 </div>
+
+
+<div class="w3-container w3-padding-64 w3-light-grey" id="contact">
+  <div class="w3-content" style="max-width:600px">
+    <h2 class="w3-center">Kontaktiraj nas</h2>
+    <p class="w3-center">Imaš pitanje ili želiš poseban dizajn? Piši nam!</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="cd44da58-fef0-4298-921b-3d74b7b9645e">
+
+      <div class="w3-section">
+        <label>Ime i prezime</label>
+        <input class="w3-input w3-border" type="text" name="name" required>
+      </div>
+
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="email" name="email" required>
+      </div>
+
+      <div class="w3-section">
+        <label>Poruka</label>
+        <textarea class="w3-input w3-border" rows="5" name="message" required></textarea>
+      </div>
+
+      <input type="hidden" name="redirect" value="https://tvojeime.github.io/mojsajt/pocetna/">
+
+      <button type="submit" class="w3-button w3-black w3-block w3-padding-large">POŠALJI PORUKU</button>
+
+      <input type="hidden" name="from_name" value="Tvoj Sajt - Kontakt">
+    </form>
+    </div>
+</div>
+
+
 
 <!-- utisci-->
 
@@ -145,38 +179,6 @@
 </div>
 
 
-<div class="w3-container w3-padding-64 w3-light-grey" id="contact">
-  <div class="w3-content" style="max-width:600px">
-    <h2 class="w3-center">Kontaktiraj nas</h2>
-    <p class="w3-center">Imaš pitanje ili želiš poseban dizajn? Piši nam!</p>
-
-    <form action="https://api.web3forms.com/submit" method="POST">
-
-      <input type="hidden" name="access_key" value="cd44da58-fef0-4298-921b-3d74b7b9645e">
-
-      <div class="w3-section">
-        <label>Ime i prezime</label>
-        <input class="w3-input w3-border" type="text" name="name" required>
-      </div>
-
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="email" name="email" required>
-      </div>
-
-      <div class="w3-section">
-        <label>Poruka</label>
-        <textarea class="w3-input w3-border" rows="5" name="message" required></textarea>
-      </div>
-
-      <input type="hidden" name="redirect" value="https://tvojeime.github.io/mojsajt/pocetna/">
-
-      <button type="submit" class="w3-button w3-black w3-block w3-padding-large">POŠALJI PORUKU</button>
-
-      <input type="hidden" name="from_name" value="Tvoj Sajt - Kontakt">
-    </form>
-    </div>
-</div>
 
 
 <div id="footer-placeholder"></div>
